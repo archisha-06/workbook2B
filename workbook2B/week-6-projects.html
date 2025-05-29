@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workbook</title>
+
+    <link rel="stylesheet" href="../workbook2B/assets/week4.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="../p5_experiments/shapes.js"></script>
+    <script src="trail.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="neon-nav">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="week4.html">Week 4</a></li>
+        <li><a href="week5.html">Week 5</a></li>
+        <li><a href="week6.html">Week 6</a></li>
+      </ul>
+    </nav>
+    <header class="header-sketch" style="position: relative; width: 100%; height: 200px; overflow: hidden;">
+      <!-- Optional actual header content if needed -->
+    </header>
+    <header>
+      <h1>Week 6 Projects</h1>
+      
+  </header>
+  <div class="background-video">
+    <video autoplay muted loop id="bg-video">
+      <source src="/159052-818026310.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+  <section class="intro">
+      <h2>Overview of Week 6: Adding Audio</h2>
+      <p style="margin-left: 170px;">This week, I explored how sound and movement can shape visual experiences 
+      </p>
+  </section>
+  <h2>Projects</h2>
+
+  <section class="projects">
+    <div class="project" id="Webcam">
+      <h3>Paint with Webcam</h3>
+      <div class="sketch-container">
+        <iframe src="../p5_experiments/paint_with_webcam/index.html" frameborder="0"></iframe>
+      </div>
+      <p>I wanted to try something a bit more interactive, so I added a webcam feature using p5.js. The idea was to experiment with 
+        live video input and see how it could make the site feel a bit more engaging.
+
+        I started by capturing the webcam feed with createCapture(VIDEO). At first, it just showed up on the page by default, which
+         wasn’t ideal — it didn’t really blend with the rest of the design. So I used capture.hide() to keep the original video feed from 
+         displaying directly, and instead drew it on the canvas using image().
+        
+        I positioned the video to follow the mouse cursor, and added a THRESHOLD filter to give it a stylized, high-contrast black and white
+         effect. It felt like a simple way to add a little visual interest without overcomplicating things.
+        
+        It took a bit of trial and error to get the size and placement right, but once I got it working, it fit in nicely with the rest of the
+         page. Overall, it was a fun little addition that made the site feel a bit more playful and interactive.</p>
+      
+        
+  </div>
+      
+      <div class="project" id="paint-an-img">
+          <h3>Audio Circles</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/audio_circles/index.html" frameborder="0"></iframe>
+          </div>
+          <p>This sketch was my first time working with live microphone input in p5.js. I wanted to experiment with real-time sound analysis, 
+            so I used the mic as an input source and broke the audio down into three frequency ranges: bass, mid, and treble. The idea was to turn
+             the incoming sound into something visual and a bit interactive.
+
+            I ended up creating a circular visual that reacts to the audio in real time — each part of the circle responds to a different 
+            frequency range. It took some trial and error to get the shape and motion to feel balanced. I spent a bit of time adjusting the 
+            sensitivity and figuring out how to map the frequency energy to visual elements in a way that made sense.
+            
+            This part of the process helped me understand more about how audio data can be broken down and used to drive visuals, and it made
+             the sound feel more “alive” on screen.
+            
+            </p>
+         
+            
+      </div>
+
+      <div class="project" id="dice-roll">
+        <h3>Pointilism</h3>
+        <div class="sketch-container">
+          <iframe src="../p5_experiments/pointilism/index.html" frameborder="0"></iframe>
+        </div>
+        <br><br><p>This sketch was my introduction to playing with images and randomness in p5.js. I followed the idea of pointillism—basically
+           recreating an image using dots instead of full strokes or pixels. What stood out to me about this process was how simple it looked at 
+           first but how dynamic it became once I started interacting with it.
+
+          I used an image and wrote a function that grabs random pixels from it and places circles based on their color. The cool part is that 
+          the size of the dots changes depending on where my mouse is on the screen—moving left makes them smaller and more detailed, while moving
+           right makes them bigger and more abstract. It’s subtle but adds a nice layer of interactivity.
+          
+          The image gets revealed slowly as you move your mouse and wait for the dots to fill in, which makes it feel kind of alive. 
+          It was a good reminder that even basic randomness, combined with user input, can lead to surprisingly engaging visuals. This sketch
+          helped me think more about how to use existing visuals in a generative way without directly copying them.</p><br><br>
+          
+    </div>
+
+      <div class="project" id="text-to-points">
+          <h3>Text spins with volume</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/sound_test/index.html" frameborder="0"></iframe>
+          </div>
+          <br>
+          <p>This was one of my first experiments with using sound as input in p5.js. I wanted to explore how audio could directly influence 
+            visuals, so I started by loading a simple beat and connecting it to an amplitude analyzer. From there, I mapped the volume levels
+             to control the size and rotation of a single piece of text on screen: “DANCE!”
+
+            What I found fun about this process was how immediate the feedback felt—once the sound played, the word would grow and spin 
+            depending on the intensity of the beat. It made the canvas feel reactive and alive, without being too complex. I kept the text 
+            centered and gave it a pulsing effect with a bit of background transparency so it wouldn’t look too static over time.
+            
+            The mousePressed function let me toggle the sound on and off, which helped during testing but also made it feel interactive.
+             Overall, this was a good exercise in mixing audio and visuals in a really direct way. It reminded me how even small changes in
+              code can make something feel engaging and responsive.
+            
+            
+            
+            </p>
+          
+      </div>
+
+  
+
+      
+  </section>
+  
+  
+
+  <section class="reflection">
+    
+    <div class="reflection-text">
+      
+      <h2>Reflection & Process</h2>
+      <p>Week 6 was about getting more comfortable with interactivity, and I think this week’s projects helped solidify that.
+         Working with both image-based pointillism and sound-reactive text gave me two very different experiences—one visual and a bit 
+         abstract, the other more playful and direct. With the pointillism sketch, I focused on how subtle movement (like mouseX) could 
+         influence the outcome, and it taught me how randomness and control can coexist in a piece. On the other hand, the sound project
+          introduced me to amplitude analysis, and it was fun seeing how audio could literally shape what’s happening on screen. It made 
+          me more aware of timing, rhythm, and user interaction. Both projects felt like small steps, but they’ve helped me better understand
+           how code and creativity can come together. I still have a lot to explore, but this week gave me a good sense of direction.</p>
+
+        
+    </div>
+    
+      
+  </section>
+
+
+    <script src="sketch.js"></script>
+    <script src="../workbook2B/header/header.js"></script>
+    
+    
+  </body>
+</html>

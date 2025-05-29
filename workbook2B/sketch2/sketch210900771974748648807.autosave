@@ -1,0 +1,86 @@
+let angleX = 0;
+let angleY = 0;
+let angleZ = 0;
+
+function setup() {
+    createCanvas(windowWidth, windowHeight, WEBGL); // Set up a 3D canvas
+}
+
+function draw() {
+    background(0); // Set background to black
+    
+    // Set lighting for the 3D scene
+    directionalLight(255, 255, 255, 0, -1, 0); // White light coming from above
+    
+    // Translate the whole scene to center the shapes
+    translate(0, 0, -500);
+    
+    // Rotate shapes along different axes
+    rotateX(angleX);
+    rotateY(angleY);
+    rotateZ(angleZ);
+    
+    // Draw a 3D rotating cube
+    push();
+    stroke(255, 0, 0); // Red color for the cube edges
+    noFill();
+    box(200); // Draw a cube with side length 200
+    pop();
+    
+    // Draw a rotating sphere next to the cube
+    push();
+    translate(250, 0, 0); // Move the sphere to the right of the cube
+    stroke(0, 255, 0); // Green color for the sphere edges
+    noFill();
+    sphere(100); // Draw a sphere with radius 100
+    pop();
+    
+    // Draw a rotating pyramid shape
+    push();
+    translate(-250, 0, 0); // Move the pyramid to the left of the cube
+    stroke(0, 0, 255); // Blue color for the pyramid edges
+    noFill();
+    pyramid(100); // Custom function to draw a pyramid
+    pop();
+    
+    // Update rotation angles for animation
+    angleX += 0.01;
+    angleY += 0.01;
+    angleZ += 0.01;
+}
+
+// Custom function to draw a pyramid
+function pyramid(size) {
+    beginShape();
+    // Draw the base of the pyramid (square)
+    vertex(-size, size, -size);
+    vertex(size, size, -size);
+    vertex(size, size, size);
+    vertex(-size, size, size);
+    endShape(CLOSE);
+    
+    // Draw the 4 triangles for the pyramid's sides
+    beginShape();
+    vertex(0, -size, 0); // Apex of the pyramid
+    vertex(-size, size, -size);
+    vertex(size, size, -size);
+    endShape(CLOSE);
+    
+    beginShape();
+    vertex(0, -size, 0); // Apex of the pyramid
+    vertex(size, size, -size);
+    vertex(size, size, size);
+    endShape(CLOSE);
+    
+    beginShape();
+    vertex(0, -size, 0); // Apex of the pyramid
+    vertex(size, size, size);
+    vertex(-size, size, size);
+    endShape(CLOSE);
+    
+    beginShape();
+    vertex(0, -size, 0); // Apex of the pyramid
+    vertex(-size, size, size);
+    vertex(-size, size, -size);
+    endShape(CLOSE);
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>I LOVE YOU</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      color: #0ff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .glitch {
+      font-size: 80px;
+      animation: glitch 1.5s infinite;
+      text-shadow:
+        1px 1px #f0f,
+        -1px -1px #0ff,
+        2px 2px #ff0;
+      text-align: center;
+    }
+
+    .subtext {
+      font-size: 14px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .photo {
+      margin-top: 20px;
+      max-width: 250px;
+      border: 2px solid #0ff;
+      border-radius: 10px;
+    }
+
+    @keyframes glitch {
+      0% { transform: scale(1); opacity: 1; }
+      10% { transform: scale(1.02) translate(-1px, -2px); }
+      20% { transform: scale(0.98) translate(2px, 1px); }
+      30% { transform: scale(1); }
+      40% { transform: rotate(0.5deg); opacity: 0.9; }
+      50% { transform: rotate(-0.5deg); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .letters {
+      position: absolute;
+      color: #0ff;
+      font-size: 20px;
+      animation: float 3s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) rotate(0deg); }
+      to { transform: translateY(-10vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="glitch">I LOVE YOU</div>
+    <div class="subtext">(give me an H1 pls)</div>
+    <img class="photo" src="../workbook2B/assets/grade-pls.jpg" alt="Cute photo" />
+  </div>
+
+  <script>
+    const chars = ['I', 'L', 'O', 'V', 'E', 'Y', 'O', 'U', '<3'];
+    const colors = ['#0ff', '#f0f', '#ff0', '#0f0', '#f00', '#00f'];
+
+    for (let i = 0; i < 200; i++) {
+      const span = document.createElement('span');
+      span.className = 'letters';
+      span.textContent = chars[Math.floor(Math.random() * chars.length)];
+      span.style.left = `${Math.random() * 100}vw`;
+      span.style.top = `${Math.random() * 100}vh`;
+      span.style.color = colors[Math.floor(Math.random() * colors.length)];
+      span.style.animationDuration = `${2 + Math.random() * 4}s`;
+      span.style.fontSize = `${12 + Math.random() * 30}px`;
+      document.body.appendChild(span);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workbook</title>
+
+    <link rel="stylesheet" href="../workbook2B/assets/week-5Html.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="../p5_experiments/shapes.js"></script>
+    <script src="trail.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="neon-nav">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="week4.html">Week 4</a></li>
+        <li><a href="week5.html">Week 5</a></li>
+        <li><a href="week6.html">Week 6</a></li>
+      </ul>
+    </nav>
+    <header class="header-sketch" style="position: relative; width: 100%; height: 200px; overflow: hidden;">
+      <!-- Optional actual header content if needed -->
+    </header>
+    <header>
+      <h1>My Workbook website progress</h1>
+      
+  </header>
+  <div class="background-video">
+    <video autoplay muted loop id="bg-video">
+      <source src="/159052-818026310.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+  <section class="intro">
+      <h2>Overview of Week 5: Coding Home-page and illustrations</h2>
+      <p style="margin-left: 170px;">In Week 5, I started working on building my Workbook 2B website using HTML, CSS and P5.JS. I wanted to implement
+        my understanding on P5.js in my website elements as well, so I decided to code all the illustrations and interactive elements
+      </p>
+  </section>
+  
+  <section class="projects">
+    <div class="project" id="Webcam">
+      <h3>Home Page</h3>
+      <div class="image-container">
+        <img src="../workbook2B/images/html-homePage.png" style="width: 1000px; height: auto;">
+      </div><br>
+      <p style="text-align: center; margin-left: 150px;">I began by defining the overall aesthetic and color scheme of the website.
+         I chose a tech-futuristic typeface to complement the theme and carefully positioned the initial text elements to 
+         establish a clear visual hierarchy and layout.
+      
+        
+  </div>
+      
+      <div class="project" id="paint-an-img">
+          <h3>Adding trail on cursor</h3>
+          <div class="image-container">
+            <iframe src="grid_trail/index.html" frameborder="0"></iframe>
+          </div><br><br>
+          <p style="text-align: center; margin-left: 150px;">To give my website a more dynamic, digital personality, I created a custom cursor trail using p5.js. 
+            Every time the mouse moves, it leaves behind a crosshair-like grid that fades out gradually, creating a 
+            subtle techy shimmer across the page. I wanted something that felt responsive but not overwhelming — something 
+            that visually follows the user without being too literal.<br>
+
+            Instead of using background(), I opted for clear() so the rest of the site stays visible underneath the canvas.
+             Each “particle” is a simple grid made of intersecting lines with decreasing opacity — a low-key nod to classic sci-fi UI design.
+              It’s also layered behind all site content using a negative z-index, making it feel integrated into the overall vibe of the site 
+              rather than just an animation floating on top. </p><br><br>
+            <div class="video-container">
+              <video autoplay muted loop>
+                  <source src="../workbook2B/assets/custom_trail.mov" type="video/mp4">
+              </video>
+              <img src="../workbook2B/assets/custom_trail.png" style="width: 500px; height: auto;">
+
+          </div>
+            
+      </div>
+
+      <div class="project" id="dice-roll">
+        <h3>Header Illustration</h3>
+        <div class="image-container">
+          <img src="../workbook2B/assets/header-1.png" style="width: 700px; height: auto;">
+          <img src="../workbook2B/assets/header-2.png" style="width: 700px; height: auto;">
+        </div>
+        <br><br><p style="text-align: center; margin-left: 150px;">Before landing on the final design, I actually went through a few different ideas. I tried some more minimal sketches, 
+          experimented with bright colours, even played around with geometric shapes fading in and out — but none of them really clicked. 
+          They either felt too static or didn’t match the energy I wanted my site to give off.<br>
+
+          </p><br><br>
+          <div class="video-container">
+            <video autoplay muted loop>
+                <source src="../workbook2B/assets/header-final.MOV" type="video/mp4">
+            </video>
+        </div>
+        <br><br><p style="text-align: center; margin-left: 150px;">Eventually, I built this — a glowing, rotating web of 3D particles 
+          using p5.js and WebGL. As soon as I saw it in motion, I knew this was it. It had the cyber feel I was after — like a floating neural 
+          network or a piece of interactive sci-fi architecture.<br>
+
+          The sketch is made up of hundreds of particles randomly placed in 3D space. When they're close enough to each other, they connect with
+           fine neon lines, forming an evolving network that rotates gently on the Y and X axis. The whole thing runs behind the header and adapts
+            to the window size — which took some fiddling to get right, but was worth it.<br>
+          
+          What I like most is how it captures a sense of motion and curiosity without being overwhelming. It's just subtle enough to
+           live behind the content but still gives the site that futuristic, slightly mysterious vibe.<br>
+
+          </p><br><br>
+    </div>
+
+      <div class="project" id="text-to-points">
+          <h3>3D Illustrations</h3>
+          <div class="three-sketches" style="display: flex;">
+            <a href="404-week4.html" class="sketch-link">
+              <div class="sketch-container" id="sketch1"></div>
+              
+            </a>
+          
+            <a href="week5.html" class="sketch-link">
+              <div class="sketch-container" id="sketch2"></div>
+              
+            </a>
+          
+            <a href="week6.html" class="sketch-link">
+              <div class="sketch-container" id="sketch3"></div>
+              
+            </a>
+          </div>
+          <br>
+          <p style="text-align: center; margin-left: 150px;">To link each week of my progress, I created three rotating 3D shapes using p5.js — a box, a sphere, and a cone — each sitting
+             in their own little canvas. I liked the idea of giving every week its own visual identity, and these shapes felt like a fun and
+              abstract way to represent each phase.<br>
+
+            Each one rotates around a different axis (Y for the cube, X for the sphere, and Z for the cone), which gives them a subtle sense 
+            of individuality while still feeling like part of a cohesive set. I chose vibrant neon colors on a dark background to give them a 
+            futuristic, digital look that fits with the rest of my site’s style.<br>
+            
+            I also added a hover effect using CSS — when you hover over a shape, it scales up slightly and glows more intensely. It’s a small 
+            interaction, but it adds personality and makes the whole page feel more alive.<br>
+            
+            That said, getting these sketches to align properly was not as straightforward as I expected. Each canvas had its own quirks with 
+            spacing and margins, especially since they were generated dynamically with WebGL. I spent quite a bit of time fiddling with layout 
+            and container styles to get them to sit nicely next to each other. It was one of those behind-the-scenes struggles that no one really
+             sees, but it definitely tested my patience.<br>
+            
+            In the end, I’m glad I pushed through — the result feels clean, interactive, and uniquely mine.<br><br>
+            
+            
+            
+            </p>
+            <div class="video-container">
+              <video autoplay muted loop>
+                  <source src="../workbook2B/assets/final-home-page.mov" type="video/mp4">
+              </video>
+          </div>
+          <br><br>
+          <p style="text-align: center; margin-left: 150px;">After getting all the interactive sketches working, I spent some time thinking 
+            about how to bring everything together. I didn’t want the homepage to feel like just a random collection of experiments — I wanted 
+            it to have flow, to guide people through my work and give a clear sense of progression.<br>
+
+            So I started by adding direct links underneath each sketch, leading to the separate weekly pages. This way, the sketches weren’t 
+            just visuals — they became clickable entry points into my process. I tried to keep the layout clean and the typography consistent,
+            just so everything felt intentional and easy to navigate.<br>
+            
+            Finally, I added a looping background video. This was something I debated for a while — I didn’t want it to overpower the content,
+             but I also felt like a bit of subtle motion could tie everything together nicely. I chose something minimal and ambient, and layered 
+             it behind the main content using CSS positioning. It really helped set a tone for the site — slightly futuristic, a bit reflective, 
+             and still grounded in the work.<br>
+            
+            This last stage made the biggest difference. Suddenly, all the separate elements started to feel like parts of a whole. 
+            The site felt more like a portfolio and less like a sketchbook — still playful, but with a sense of intention and clarity.
+            
+            <br><br>
+
+           </p>
+      </div>
+
+      
+
+  
+
+
+    <script src="sketch.js"></script>
+    <script src="../workbook2B/header/header.js"></script>
+    <script src="../workbook2B/sketch1/sketch1.js"></script>
+    <script src="../workbook2B/sketch2/sketch2.js"></script>
+    <script src="../workbook2B/sketch3/sketch3.js"></script>
+    
+    
+  </body>
+</html>

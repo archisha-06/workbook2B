@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workbook</title>
+
+    <link rel="stylesheet" href="../workbook2B/assets/week4.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="../p5_experiments/shapes.js"></script>
+    <script src="trail.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="neon-nav">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="week4.html">Week 4</a></li>
+        <li><a href="week5.html">Week 5</a></li>
+        <li><a href="week6.html">Week 6</a></li>
+      </ul>
+    </nav>
+    <header class="header-sketch" style="position: relative; width: 100%; height: 200px; overflow: hidden;">
+      <!-- Optional actual header content if needed -->
+    </header>
+    <header>
+      <h1>Week 5 Projects</h1>
+      
+  </header>
+  <div class="background-video">
+    <video autoplay muted loop id="bg-video">
+      <source src="/159052-818026310.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+  <section class="intro">
+      <h2>Overview of Week 5: Adding Images</h2>
+      <p style="margin-left: 170px;">In Week 5, we learned how to load images in P5.JS and experimented it using different projects. I also 
+        tried some other cool projects using code snippets from week 5.
+      </p>
+  </section>
+  <h2>Projects</h2>
+
+  <section class="projects">
+    <div class="project" id="Webcam">
+      <h3>Workshop Activity: Adding webcam</h3>
+      <div class="sketch-container">
+        <iframe src="../p5_experiments/webcam/index.html" frameborder="0"></iframe>
+      </div>
+      <p>This week, I experimented with adding a webcam to my sketch using p5.js — something I’d never done before,
+         so I wasn’t exactly sure how it would work. At first, I followed the usual approach: declaring the capture variable, 
+         setting it up in the createCapture() function, and trying to draw it on the canvas. But of course, like most first attempts,
+          it didn’t show up the way I expected.<br>
+
+        Turns out, there are a few little things that matter a lot — like using capture.hide() to prevent the webcam’s default HTML 
+        element from overlapping the canvas, and making sure to center the video using imageMode(CENTER) if I wanted it to sit neatly in the
+         middle. Once I figured those parts out, it started to feel more intuitive.<br>
+        
+        I also added a THRESHOLD filter to the feed, which turned the live video into a stark black-and-white image. 
+        It gave the webcam a bold, almost poster-like effect — something that looked way more artistic than I had imagined with just 
+        a few lines of code.<br>
+        
+        Looking back, this process reminded me how small tweaks in code can make a huge difference in the outcome.
+         Debugging can be frustrating, but it’s also kind of rewarding when it finally clicks.</p>
+         <div class="video-container">
+          <video autoplay muted loop>
+              <source src="../workbook2B/videos2/webcam-vid.MOV" type="video/mp4">
+          </video>
+          <img src="../workbook2B/images/webcam.png" style="width: 500px; height: auto;">
+          
+      </div>
+        
+  </div>
+      
+      <div class="project" id="paint-an-img">
+          <h3>Paint an image copy</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/paint_img_copy/index.html" frameborder="0"></iframe>
+          </div><br><br><br>
+          <p>This sketch was my attempt at playing with layers and interaction — specifically, the idea of revealing one image through 
+            another using the mouse. I used two images stacked on top of each other: one as the base and another one completely covering it.
+             The cool part? You can “scratch away” at the top image with your mouse to reveal what’s underneath — like a digital scratch card.<br>
+
+            At first, I wasn’t sure how to achieve that effect. I knew I wanted the reveal to feel interactive and playful, 
+            almost like peeling something off. After some experimenting (and re-reading the p5.js reference like 12 times), 
+            I found that the copy() function was perfect for this. It let me take small patches of the top image and redraw them 
+            directly under the cursor as I dragged the mouse.<br>
+            
+            One of the biggest surprises was how satisfying it felt — even with a super basic setup, the effect felt kind of magical. 
+            It’s simple, but it invites the viewer to interact with the image in a way that feels personal. I can definitely see potential 
+            in taking this further, maybe adding sound or dynamic brush shapes to make it even more immersive.</p><br><br><br>
+            <div class="video-container">
+             
+              <img src="../workbook2B/images/paint-img-copy.png" style="width: 500px; height: auto;">
+
+          </div>
+            
+      </div>
+
+      <div class="project" id="dice-roll">
+        <h3>Dice Roll</h3>
+        <div class="sketch-container">
+          <iframe src="../p5_experiments/dice_roll/index.html" frameborder="0"></iframe>
+        </div>
+        <br><br><p>This little sketch was my first go at creating a digital dice roller — something super simple, 
+          but surprisingly fun to build. The idea was to roll a number between 0 and 5 every time you click 
+          (like rolling a 6-sided die), and display that number in the center of the screen.<br>
+
+          I started with the basics: setting up the canvas, choosing a bright blue background (because why not), 
+          and making the number show up nice and bold with a big text size. The actual "dice roll" part was just using random(6) 
+          and converting that to an integer. It felt cool to have that tiny moment of unpredictability every time I clicked.<br>
+          
+          I originally planned to use the spacebar to trigger the roll, but then decided mouse clicks were easier to test quickly. 
+          I might go back and experiment with adding dice graphics or even a rolling animation later. But for now, this version feels playful 
+          — kind of like a digital fidget toy. It reminded me that even with a few lines of code,
+           you can make something interactive and satisfying.</p><br><br>
+          <img src="../workbook2B/images/dice-roll.png" style="width: 500px; height: auto;">
+    </div>
+
+      <div class="project" id="text-to-points">
+          <h3>Text to Points</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/text_to_points/index.html" frameborder="0"></iframe>
+          </div>
+          <br>
+          <p>This sketch was my first experiment using custom fonts and point manipulation in p5.js —
+             and it turned out to be a surprisingly poetic little piece. I wanted to write something simple like "I Love You!"
+              but make the letters feel alive and responsive, so I used a font converter with textToPoints() to break the phrase 
+              into coordinates.<br>
+
+            At first, seeing the phrase built entirely from points was oddly exciting — almost like I had access to its skeleton. 
+            Then I started playing with interactivity. I mapped the mouse's horizontal movement to change the blue tint and size of 
+            the circles that form each letter. Suddenly the text felt like it was breathing or reacting emotionally, which gave it a 
+            kind of quiet intimacy.<br>
+            
+            This project helped me understand the link between typography and generative art — how something as personal as a message 
+            can be turned into a dynamic visual experience with just a few tweaks. It’s one of those sketches that looks simple, but 
+            feels deeper the longer you play with it.
+            
+            </p>
+            <div class="video-container">
+              <video autoplay muted loop>
+                  <source src="../workbook2B/videos/text-to-points.mov" type="video/mp4">
+              </video>
+              <img src="../workbook2B/images/text-to-points.png" style="width: 500px; height: auto;">
+              
+          </div>
+      </div>
+
+      <div class="project" id="self-portrait">
+          <h3>Self Portrait</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/self_portrait/index.html" frameborder="0"></iframe>
+          </div>
+          <br><br><p>This sketch is a playful self-portrait I created using p5.js. I kept things simple, using basic shapes to build the features
+             — from the blushy cheeks to the oversized specs that are very me. What makes this portrait special is that the glasses are
+              interactive: you can click and drag them around my face.<br>
+
+            The idea was to reflect not just how I look, but a bit of how I feel — a little quirky,
+             always adjusting how I see the world. Making the glasses movable felt symbolic, like giving the viewer a tiny piece of 
+             control over my perspective (or at least my fashion choices).<br>
+            
+            It was a fun and surprisingly reflective process. I learned a lot about layering, shape alignment, and how just a small
+             interactive element can bring a static image to life. Seeing myself represented this way — in code and creativity — felt
+              kind of empowering.
+            
+            </p><br><br>
+            <div class="video-container">
+              <video autoplay muted loop>
+                  <source src="../workbook2B/videos/self-portrait.mov" type="video/mp4">
+              </video>
+              
+              
+          </div> 
+      </div>
+      <div class="project" id="load-img">
+        <h3>Colour and Black and White trail</h3>
+        <div class="sketch-container">
+          <iframe src="../p5_experiments/img_load/index.html" frameborder="0"></iframe>
+        </div>
+        <br><br><p>In this sketch, I experimented with layering two images and letting the user "paint" with them using their mouse.
+           When the mouse is pressed, one image appears under the cursor, and when it's not, it switches to another — kind of like
+            flipping between two moods or moments. It reminded me a bit of digital collage-making or memory layering, where the same space 
+            can hold multiple visuals depending on how you interact with it.<br>
+
+          What I enjoyed about this was how simple logic in code — just a mouse press condition — could create such an intuitive,
+           tactile experience. Playing around with the image sizes and ratios also taught me more about how images behave when stretched
+            or transformed in p5.js.<br>
+          
+          This was a fun way to combine visuals with interaction and explore how subtle changes in input can shift the entire outcome.
+          
+          </p><br><br>
+          <div class="video-container">
+            <video autoplay muted loop>
+                <source src="../workbook2B/videos/paint-img-copy.MOV" type="video/mp4">
+            </video>
+            
+            
+        </div>  
+    </div>
+
+      
+  </section>
+  
+  
+
+  <section class="reflection">
+    
+    <div class="reflection-text">
+      
+      <h2>Reflection & Process</h2>
+      <p>This week, I used p5.js to experiment with different ideas — from layering images and adding webcam effects, 
+        to making simple interactive sketches like a dice roller and a moving glasses portrait.<br>
+
+        Getting the webcam to work was a bit tricky at first, but I eventually figured it out. It was cool to see how small 
+        changes in code could create interesting effects. I also tried using textToPoints to turn text into dots, which added a fun 
+        visual element.<br>
+        
+        Overall, it was a productive week. I learned more about how p5.js works, and I got to try out new things while organizing my 
+        work in one place. There’s still a lot to do, but it feels like I’m getting the hang of it.</p>
+
+        
+    </div>
+    
+      
+  </section>
+
+
+    <script src="sketch.js"></script>
+    <script src="../workbook2B/header/header.js"></script>
+    
+    
+  </body>
+</html>

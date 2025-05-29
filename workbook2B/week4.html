@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workbook</title>
+
+    <link rel="stylesheet" href="../workbook2B/assets/week4.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="../p5_experiments/shapes.js"></script>
+    <script src="trail.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="neon-nav">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="week4.html">Week 4</a></li>
+        <li><a href="week5.html">Week 5</a></li>
+        <li><a href="week6.html">Week 6</a></li>
+        <li><a href="msg.html">Message for you<3</a></li>
+      </ul>
+    </nav>
+    <header class="header-sketch" style="position: relative; width: 100%; height: 200px; overflow: hidden;">
+      <!-- Optional actual header content if needed -->
+    </header>
+    <header>
+      <h1>Welcome to Week 4</h1>
+      <p class="subheading" style="margin-left: 170px;">First week of Journey Through Generative Design, Interactive Coding, and Fun</p>
+      <p class="theme-intro"style="margin-left: 170px;">In this week we were introduced to p5.js and processing. Ever wondered what happens when creativity meets coding?
+         Let's explore this together!</p>
+  </header>
+  <div class="background-video">
+    <video autoplay muted loop id="bg-video">
+        <source src="/159052-818026310.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+  <section class="intro">
+      <h2>Overview of Week 4: Generative Design & Creative Coding</h2>
+      <p style="margin-left: 170px;">In Week 4, we explored the world of generative design and creative coding through interactive coding. This week focused on understanding the basics of creative coding with P5.js, which allows us to create fun, interactive, and generative artworks. The most exciting part was diving into how generative art comes to life algorithmically and using randomness to create unique experiences!</p>
+  </section>
+  <h2>My Sweet Projects</h2>
+
+  <section class="projects">
+      
+      <div class="project" id="circle-follows-mouse">
+          <h3>Circle Follows Mouse</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/circle_follows_mouse/index.html" frameborder="0"></iframe>
+          </div>
+          <p>This was my first project where I made a circle that follows the mouse around the screen. 
+            I used the code from the code snippets provided to us in the Week-4 material. I got familiar with the Processing interface and 
+            learnt basic setup and draw functions.</p>
+            <img src="../workbook2B/images/circle_follows.png" style="width: 500px; height: auto;">
+            
+      </div>
+
+      <div class="project" id="mouse-trail">
+        <h3>Mouse Trail</h3>
+        <div class="sketch-container">
+          <iframe src="../p5_experiments/mouse_trail/index.html" frameborder="0"></iframe>
+        </div>
+        <p> After trying the previous code I wanted to explore it further by making a mouse trail instead of just the circle following the mouse. 
+          I looked up for some coding references at <a href="https://www.w3schools.com/">W3 Schools</a> and found out it could be done
+          simply by making one change- removing the background in the draw() function.</p>
+          <img src="../workbook2B/images/mouse-trail.png" style="width: 500px; height: auto;">
+    </div>
+
+      <div class="project" id="doodle-with-line">
+          <h3>Doodle with Line + Clear Background on Click</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/doodle_line/index.html" frameborder="0"></iframe>
+          </div>
+          <br>
+          <p>I added randomness to this one!
+             You can draw anything you like, and when you click, the background clears with a random color—like a fresh start every time!
+            I actually spent a lot of time playing with it myself. See it for yourself</p>
+            <div class="video-container">
+              <video autoplay muted loop>
+                  <source src="../workbook2B/videos2/doodle-line.mov" type="video/mp4">
+              </video>
+              <img src="../workbook2B/images/doodle-line.png" style="width: 500px; height: auto;">
+              
+          </div>
+      </div>
+
+      <div class="project" id="preload-image">
+          <h3>Preload Image + Image Follows Mouse</h3>
+          <div class="sketch-container">
+            <iframe src="../p5_experiments/preloadImg/index.html" frameborder="0"></iframe>
+          </div>
+          <p>My robot friend here pretty much sums up how I looked while coding this. Getting the image to actually show up on 
+            screen was more confusing than I expected —</p><br><br> <img src="../workbook2B/images/loading.png" style="width: 500px; height: auto;"><br><br>
+             <p>After staring at the loading screen for way too long and some trial and error , I finally got it working. Small win, big relief.</p><br><br>
+             <img src="../workbook2B/images/preloadImg.png" style="width: 500px; height: auto;"> 
+      </div>
+
+      
+  </section>
+  <div class="project-center">
+    <div class="project" id="kusama-polka-party" style="width: 1000px;height: auto; ">
+      <h3>Kusama Polka Party</h3>
+      <div class="sketch-container">
+        <iframe src="../p5_experiments/kusma_polkaDots/index.html" frameborder="0"></iframe>
+      
+      </div>
+      <p>This project was inspired by Yayoi Kusama's polka dot artwork. I wanted to create something that felt spontaneous and joyful, with randomly placed, colorful dots all over the screen!</p>
+  </div>
+    
+  </div>
+  
+
+  <section class="reflection">
+    
+    <div class="reflection-text">
+      
+      <h2>Reflection & Process</h2>
+      <p>This week I got pretty deep into experimenting with randomness in creative coding, 
+        and honestly, it was more fun than I expected. Every sketch ended up feeling a bit 
+        like a surprise. Whether it was random colors, mouse tracking, or objects popping 
+        up in unexpected places, there was always something unpredictable happening on screen.</p>
+
+        <p>I realized how much interactivity changes the whole experience. 
+          Even small responses to the user's actions make the sketch feel more personal 
+          — like the code is kind of... alive. It also made me think about how generative art
+           isn’t just random noise — it’s a weird blend of freedom and structure. You let go a
+            little, but not too much, and the results feel organic.</p>
+
+       <p>One thing that stuck with me was the balance between control and chaos. 
+            It’s tricky, but it’s what makes generative art so cool. It’s like giving your 
+            code just enough freedom to do its thing without letting it completely spiral.</p>
+
+          
+      <p>There’s definitely more I want to try — like adding a bit of narrative or letting the user guide 
+        the outcome more directly. Something that feels less like a sketch and more like an experience. 
+        But for now, I’m just glad it didn’t crash... and kind of amazed by what a few lines of code can do when you loosen the reins a bit.</p>
+    </div>
+    <img src="../workbook2B/images/week-4ReflectionMeme.png" class="reflection-image">
+      
+  </section>
+
+
+    <script src="sketch.js"></script>
+    <script src="../workbook2B/header/header.js"></script>
+    
+    
+  </body>
+</html>
